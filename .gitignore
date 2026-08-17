@@ -1,0 +1,27 @@
+# ============================================================
+# REPO PÚBLICO — só pode conter IMAGENS de divulgação.
+# Allowlist: bloqueia tudo por padrão e libera só o permitido.
+# NUNCA versionar: dados de lead, .env, preços internos, contratos,
+# documentos, planilhas, backups de banco. Se precisar de git add -f
+# pra passar por aqui, PARE e pense se aquilo pode ser público.
+# ============================================================
+
+# bloqueia tudo
+*
+
+# libera navegação em subpastas
+!*/
+
+# libera imagens
+!*.jpg
+!*.jpeg
+!*.png
+!*.webp
+!*.avif
+!*.gif
+!*.svg
+
+# libera infra do repo
+!manifest.json
+!README.md
+!.gitignore

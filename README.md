@@ -58,6 +58,19 @@ for(const f of files){const s=fs.readFileSync(f,"utf8");const n=s.replace(re,(_,
 - **Sites existentes** migram quando forem mexidos — ou todos de uma vez (regex acima) se a
   Cury bloquear a origem.
 
+## 🔒 Segurança — o que pode e o que NÃO pode entrar aqui
+
+Repo **público** (requisito do jsDelivr). Uma "key" não protegeria nada: as imagens
+aparecem nos sites e já são abertas em `cury.net`. A proteção é sobre **o que entra**:
+
+- ✅ **PODE:** imagens de divulgação (fotos, plantas) e a infra (`manifest.json`, `README`).
+- ❌ **NUNCA:** dados de lead, `.env`, credenciais, tabelas de preço internas, contratos,
+  documentos, planilhas, dumps de banco.
+
+Barreira técnica: o `.gitignore` é **allowlist** — bloqueia tudo e libera só imagem +
+`manifest.json` + `README`. Se você precisar de `git add -f` pra versionar algo aqui,
+**pare** e confirme que aquilo pode ser público.
+
 ## Atualizar (novos empreendimentos / novas fotos)
 
 Re-rodar o script de download (em `curyconstrutoras/scripts` ou no scratchpad) apontando pras
