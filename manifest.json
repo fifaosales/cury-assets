@@ -319,13 +319,11 @@
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6995fe1901c22.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6995fe284ce7e.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6995feb29d296.jpg",
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6995fec2432b5.jpg",
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6995feddf8969.jpg"
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6995fec2432b5.jpg"
     ],
     "plants": [
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6996056655799.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6996056f85243.jpg",
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/699605796260c.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/699605843a3e2.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6996058d83683.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/69960597865a8.jpg"
@@ -685,6 +683,34 @@
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6363c85a9bce2.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6363c886d220c.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6363c8daebf85.jpg"
+    ],
+    "own": []
+  },
+  "nova-leopoldina-ramos": {
+    "name": "Nova Leopoldina Ramos",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a57cf8ae2839.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a04e9bb2a7.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a05226304b.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a055a523a9.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a05653ba8f.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a05bf121c3.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a05cae710e.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a06691e6f9.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a06a84e421.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a06e51bd28.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a07360719a.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a0c58abb5b.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a0e255f65d.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a6a0eb77714e.jpg"
+    ],
+    "plants": [
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a6a135547e6e.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a6a135c4da3d.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a6a1362b702e.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a6a136e2ba7d.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a6a137830708.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a6a13806b03e.jpg"
     ],
     "own": []
   }
