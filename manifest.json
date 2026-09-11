@@ -33,11 +33,30 @@
   },
   "residencial-ere": {
     "name": "Residencial Erê",
-    "gallery": [],
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a83899a9cf60.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a8628c0a493b.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a8628d4a9036.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a8628f2d29cf.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a862908206a2.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a86291b5f3d8.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a86293607924.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a862945e03c7.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a8629547e7bb.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a862963c6264.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a8629725ee30.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a86298b74f6e.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a86299f38a5f.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a8629b28d43b.jpg"
+    ],
     "plants": [
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6941c97fcf639.jpg",
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6941c9889aead.jpg",
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6941c971cdd64.jpg"
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a862a890dbe7.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a862a901dc56.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a862a9ae6e6e.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a862aa28425c.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a862aa8bae3a.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a862ab0b3dcd.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a862ab86abef.jpg"
     ],
     "own": [
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/proprias/residencial-ere/01.jpg"
@@ -66,7 +85,8 @@
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/69e148d0b939e.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/69e148e7665ad.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/69e148f9303da.jpg",
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/69e1490ade561.jpg"
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/69e1490ade561.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/69e13d1c110eb.jpg"
     ],
     "plants": [
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/69e141bfced02.jpg",

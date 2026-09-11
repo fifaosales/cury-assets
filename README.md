@@ -20,7 +20,10 @@ proprias/<slug>/NN.jpg      # imagens que NÃO são da Cury (ex.: Residencial Er
 manifest.json               # slug -> { name, gallery[], plants[], own[] } com URLs jsDelivr
 ```
 
-Imagens comprimidas (resize 1600px, mozjpeg q82) — ~250 KB cada, 77 MB no total.
+Imagens comprimidas (resize 1600px, JPEG q82 progressivo, sem metadados) — **95 MB no total,
+média ~160 KB, nenhuma acima de 500 KB** (medido em 11/09/2026, 604 arquivos). Até 11/09 o
+espelho tinha os bytes ORIGINAIS da Cury (199 MB, até 2,1 MB por foto) — a compressão foi feita
+com ImageMagick, mantendo só o resultado quando ele é menor que o original.
 
 ## Como usar num site
 
