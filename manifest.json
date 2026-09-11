@@ -59,7 +59,9 @@
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a862ab86abef.jpg"
     ],
     "own": [
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/proprias/residencial-ere/01.jpg"
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/proprias/residencial-ere/02.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/proprias/residencial-ere/03.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/proprias/residencial-ere/04.jpg"
     ]
   },
   "orla-central": {
@@ -277,7 +279,8 @@
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/681272e67658b.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/681272fc91944.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/68127390b3f37.jpg",
-      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6812743709dda.jpg"
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6812743709dda.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6995fedfd8969.jpg"
     ],
     "plants": [
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/68123ce456d49.jpg",
@@ -712,6 +715,27 @@
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a6a137830708.jpg",
       "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/plants/6a6a13806b03e.jpg"
     ],
+    "own": []
+  },
+  "orla-recreio-praia-do-pontal": {
+    "name": "Orla Recreio - Praia do Pontal",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542cdf28f847.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ce070e53b.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ce1be43b2.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ce2d94b0c.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ce481ec06.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ce5538aff.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ce635575d.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ce73085ce.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ce8085510.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542cea7a39a8.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542ceb529708.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542cec2d1afa.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6542cedc83471.jpg",
+      "https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/654a9274061e3.jpg"
+    ],
+    "plants": [],
     "own": []
   }
 }
