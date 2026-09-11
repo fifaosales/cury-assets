@@ -76,6 +76,34 @@ Barreira técnica: o `.gitignore` é **allowlist** — bloqueia tudo e libera s�
 
 ## Atualizar (novos empreendimentos / novas fotos)
 
-Re-rodar o script de download (em `curyconstrutoras/scripts` ou no scratchpad) apontando pras
-novas URLs `cury.net`, depois `git add . && git commit && git push`. O jsDelivr atualiza em
-até ~12h (ou force purge via `purge.jsdelivr.net`).
+Clones: `~/projetos/cury-assets` (WSL, fonte) e `C:\github\cury-assets` (espelho Windows).
+**Toda imagem entra comprimida** — foi assim que o repo caiu de 199 MB para 95 MB em 11/09/2026, e
+o que entrar pesado a partir daqui pesa em todos os sites de corretores ao mesmo tempo.
+
+> **No WSL** (`cd ~/projetos/cury-assets`; ImageMagick 6 → o binário é `convert`):
+> ```bash
+> # 1. baixar da Cury, preservando o hash (gallery ou plants)
+> h=6a8628c0a493b; t=gallery
+> curl -sL -A "Mozilla/5.0" "https://cury.net/storage/images/products/$t/$h.jpeg" -o "$t/$h.jpg"
+> # 2. comprimir — só substitui se ficar menor
+> convert "$t/$h.jpg" -auto-orient -strip -resize '1600x1600>' -sampling-factor 4:2:0 -interlace JPEG -quality 82 /tmp/c.jpg
+> [ "$(stat -c%s /tmp/c.jpg)" -lt "$(stat -c%s "$t/$h.jpg")" ] && mv /tmp/c.jpg "$t/$h.jpg"
+> # 3. gate: nada acima de 500 KB
+> find gallery plants proprias -name '*.jpg' -size +500k
+> # 4. manifest.json (slug -> gallery/plants/own) e push
+> git add -A && git commit -m "mirror: <empreendimento>" && git push
+> ```
+
+**Se um arquivo que JÁ existia mudou de bytes**, o jsDelivr pode servir a versão velha por até 12h:
+`curl -s "https://purge.jsdelivr.net/gh/fifaosales/cury-assets@main/$t/$h.jpg"`. Conferir com um
+`HEAD` — o `content-length` tem que bater com `stat -c%s` do arquivo local. Arquivo novo não precisa.
+
+**Migrar um site que ainda puxa de `cury.net`:** o find/replace da seção acima. Antes, confira a
+cobertura (todo hash do site existe aqui), senão vira 404 na cara do cliente:
+
+```bash
+# na raiz do site
+for p in $(grep -ohE "products/(gallery|plants)/[0-9a-f]+\.jpeg" -r src/ | sed 's#products/##; s#\.jpeg##' | sort -u); do
+  [ -f ~/projetos/cury-assets/$p.jpg ] || echo "FALTA $p"
+done   # tem que sair vazio
+```
