@@ -1,0 +1,13 @@
+# imagens: cache de 7 dias (os arquivos podem ser recomprimidos, então não são imutáveis)
+/gallery/*
+  Cache-Control: public, max-age=604800
+  Access-Control-Allow-Origin: *
+/plants/*
+  Cache-Control: public, max-age=604800
+  Access-Control-Allow-Origin: *
+/proprias/*
+  Cache-Control: public, max-age=604800
+  Access-Control-Allow-Origin: *
+/manifest.json
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *

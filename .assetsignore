@@ -1,0 +1,7 @@
+# não publicar: infra do repositório (o resto do repo já é só imagem, por causa do .gitignore allowlist)
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+README.md
+.wrangler

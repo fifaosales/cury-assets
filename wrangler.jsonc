@@ -1,0 +1,9 @@
+// Publica este repositório como arquivos estáticos na Cloudflare (Workers Static Assets).
+// Sem script de Worker: só serve os arquivos. Deploy automático a cada push na main.
+{
+  "name": "cury-assets",
+  "compatibility_date": "2026-10-20",
+  "assets": {
+    "directory": "./"
+  }
+}

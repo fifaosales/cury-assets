@@ -25,3 +25,7 @@
 !manifest.json
 !README.md
 !.gitignore
+# deploy na Cloudflare (Workers Static Assets)
+!wrangler.jsonc
+!.assetsignore
+!_headers
