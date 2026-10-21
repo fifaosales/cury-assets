@@ -22,7 +22,7 @@ está o backup independente — e o hash original é preservado, então migrar q
 gallery/<hash>.jpg          # fotos oficiais Cury (hash = o mesmo de cury.net)
 plants/<hash>.jpg           # plantas oficiais
 proprias/<slug>/NN.jpg      # imagens que NÃO são da Cury (ex.: Residencial Erê)
-manifest.json               # slug -> { name, gallery[], plants[], own[] } com URLs jsDelivr
+manifest.json               # slug -> { name, gallery[], plants[], own[] } com URLs da Cloudflare
 ```
 
 Imagens comprimidas (resize 1600px, JPEG q82 progressivo, sem metadados) — **95 MB no total,
