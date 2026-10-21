@@ -1,7 +1,12 @@
 # cury-assets
 
 Biblioteca central de imagens dos empreendimentos **Cury Construtora RJ** — fotos e plantas,
-espelhadas da CDN `cury.net` e servidas por **jsDelivr** (CDN grátis).
+espelhadas da CDN `cury.net` e servidas pela **Cloudflare** (Workers Static Assets, grátis):
+**`https://cury-assets.fifao-sales.workers.dev`**. Deploy automático a cada push na `main` (`wrangler.jsonc`).
+
+> ⚠️ **jsDelivr = LEGADO (20/10/2026).** Com o repositório acima de 50 MB, o jsDelivr dá **403
+> intermitente** em cache miss, e recusa aumentar o limite para hospedagem de imagem de site
+> (issue #1). Sites novos usam a URL da Cloudflare; os antigos migram quando forem mexidos.
 
 **Por quê:** os sites de corretores puxavam as imagens direto de `cury.net`. Se a Cury mudar
 os hashes, migrar de storage ou bloquear hotlink, **todos os sites quebram de uma vez**. Aqui
@@ -27,11 +32,11 @@ com ImageMagick, mantendo só o resultado quando ele é menor que o original.
 
 ## Como usar num site
 
-URL base (jsDelivr):
+URL base (Cloudflare):
 ```
-https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/<caminho>
+https://cury-assets.fifao-sales.workers.dev/<caminho>
 ```
-Ex.: `https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main/gallery/6a04c9be71828.jpg`
+Ex.: `https://cury-assets.fifao-sales.workers.dev/gallery/6a04c9be71828.jpg`
 
 Sites novos: consumir o `manifest.json` (por slug) ou apontar direto pras URLs acima.
 
@@ -49,7 +54,7 @@ node -e '
 const fs=require("fs"),cp=require("child_process");
 const files=cp.execSync(`grep -rlE "cury\\.net/storage/images" src/`).toString().split("\n").filter(Boolean);
 const re=/https:\/\/cury\.net\/storage\/images(?:_webp)?\/products\/(gallery|plants)\/([0-9a-f]+)\.jpeg(?:\.webp)?/g;
-const base="https://cdn.jsdelivr.net/gh/fifaosales/cury-assets@main";
+const base="https://cury-assets.fifao-sales.workers.dev";
 for(const f of files){const s=fs.readFileSync(f,"utf8");const n=s.replace(re,(_,t,h)=>`${base}/${t}/${h}.jpg`);if(n!==s){fs.writeFileSync(f,n);console.log("migrado",f)}}
 '
 ```
@@ -57,13 +62,13 @@ for(const f of files){const s=fs.readFileSync(f,"utf8");const n=s.replace(re,(_,
 ## Estratégia de rollout
 
 - **Backup completo** (este repo) = o seguro. Feito uma vez, mantido atualizado.
-- **Sites novos** já nascem apontando pro jsDelivr.
+- **Sites novos** já nascem apontando pra Cloudflare.
 - **Sites existentes** migram quando forem mexidos — ou todos de uma vez (regex acima) se a
   Cury bloquear a origem.
 
 ## 🔒 Segurança — o que pode e o que NÃO pode entrar aqui
 
-Repo **público** (requisito do jsDelivr). Uma "key" não protegeria nada: as imagens
+Repo **público** (era requisito do jsDelivr; a Cloudflare publica a partir do push). Uma "key" não protegeria nada: as imagens
 aparecem nos sites e já são abertas em `cury.net`. A proteção é sobre **o que entra**:
 
 - ✅ **PODE:** imagens de divulgação (fotos, plantas) e a infra (`manifest.json`, `README`).
@@ -94,7 +99,8 @@ o que entrar pesado a partir daqui pesa em todos os sites de corretores ao mesmo
 > git add -A && git commit -m "mirror: <empreendimento>" && git push
 > ```
 
-**Se um arquivo que JÁ existia mudou de bytes**, o jsDelivr pode servir a versão velha por até 12h:
+**Se um arquivo que JÁ existia mudou de bytes**, o navegador pode manter a versão velha por até 7 dias
+(`_headers`: `max-age=604800`); a Cloudflare publica a nova no deploy. No jsDelivr legado o purge é
 `curl -s "https://purge.jsdelivr.net/gh/fifaosales/cury-assets@main/$t/$h.jpg"`. Conferir com um
 `HEAD` — o `content-length` tem que bater com `stat -c%s` do arquivo local. Arquivo novo não precisa.
 
@@ -107,3 +113,15 @@ for p in $(grep -ohE "products/(gallery|plants)/[0-9a-f]+\.jpeg" -r src/ | sed '
   [ -f ~/projetos/cury-assets/$p.jpg ] || echo "FALTA $p"
 done   # tem que sair vazio
 ```
+
+
+## Provar o deploy (todo arquivo, não amostra)
+
+> **No WSL**: status 200 + tamanho igual ao local para cada imagem do repo, e controles que precisam dar 404.
+> ```bash
+> B=https://cury-assets.fifao-sales.workers.dev; cd ~/projetos/cury-assets
+> curl -s -o /dev/null -w "%{http_code}\n" "$B/.git/config"   # tem que ser 404
+> git ls-files | grep -E '\.(jpg|jpeg|png)$|^manifest\.json$' | xargs -P 8 -I{} sh -c \
+> '  r=$(curl -s -o /dev/null -w "%{http_code} %{size_download}" "$0/{}"); [ "$r" = "200 $(stat -c%s {})" ] || echo "RUIM {} $r"' "$B"
+> ```
+> Saída vazia = tudo certo. 20/10/2026: 851/851 OK.
